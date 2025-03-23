@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="admin.css" />
+  <title>Learn Verse | Admin Panel</title>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">Learn Verse</div>
+      <button class="mobile-menu-btn">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="course.html">Courses</a></li>
+        
+          <li><a href="learning.html">Learning & Instructor</a></li>
+
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main class="container admin-dashboard">
+    <div class="sidebar">
+      <div class="admin-info">
+        <img src="./assets/12..jpg" alt="Admin" class="admin-avatar" />
+        <div class="admin-details">
+          <h3></h3>
+          <p>rishirajraj124@gmail.com</p>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active" data-tab="dashboard"><span class="icon">📊</span> Dashboard</li>
+        <li data-tab="courses"><span class="icon">📚</span> Courses</li>
+        <li data-tab="students"><span class="icon">👨‍🎓</span> Students</li>
+        <li data-tab="instructors"><span class="icon">👨‍🏫</span> Instructors</li>
+        <li data-tab="settings"><span class="icon">⚙️</span> Settings</li>
+      </ul>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <div class="tab-content active" id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-icon">👨‍🎓</div>
+            <div class="stat-info">
+              <h3>Total Students</h3>
+              <p class="stat-value">1,245</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <div class="stat-info">
+              <h3>Active Courses</h3>
+              <p class="stat-value">24</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-info">
+              <h3>Revenue (Month)</h3>
+              <p class="stat-value">₹245,680</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-info">
+              <h3>Completion Rate</h3>
+              <p class="stat-value">68%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="recent-activity">
+          <h3>Recent Activity</h3>
+          <table class="activity-table">
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>User</th>
+                <th>Course</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Enrollment</td>
+                <td>Rahul Sharma</td>
+                <td>Web Development Masterclass</td>
+                <td>Mar 22, 2025</td>
+              </tr>
+              <tr>
+                <td>Course Completion</td>
+                <td>Priya Patel</td>
+                <td>Python for Data Science</td>
+                <td>Mar 21, 2025</td>
+              </tr>
+              <tr>
+                <td>Course Added</td>
+                <td>Admin User</td>
+                <td>UI/UX Design Fundamentals</td>
+                <td>Mar 20, 2025</td>
+              </tr>
+              <tr>
+                <td>Instructor Added</td>
+                <td>Admin User</td>
+                <td>Vikram Mehta (React Expert)</td>
+                <td>Mar 19, 2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-content" id="courses">
+        <h2>Manage Courses</h2>
+        <div class="action-bar">
+          <button id="add-course-btn" class="btn">Add New Course</button>
+          <div class="search-bar">
+            <input type="text" placeholder="Search courses..." />
+            <button class="search-btn">🔍</button>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Instructor</th>
+              <th>Students</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Web Development Masterclass</td>
+              <td>Shraddha Khapra</td>
+              <td>356</td>
+              <td>₹999</td>
+              <td><span class="status active">Active</span></td>
+              <td class="actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Python for Data Science</td>
+              <td>Rahul Mishra</td>
+              <td>289</td>
+              <td>₹1,299</td>
+              <td><span class="status active">Active</span></td>
+              <td class="actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>UI/UX Design Fundamentals</td>
+              <td>Priya Desai</td>
+              <td>124</td>
+              <td>₹1,499</td>
+              <td><span class="status draft">Draft</span></td>
+              <td class="actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-content" id="students">
+        <h2>Manage Students</h2>
+        <div class="action-bar">
+          <button id="add-student-btn" class="btn">Add New Student</button>
+          <div class="search-bar">
+            <input type="text" placeholder="Search students..." />
+            <button class="search-btn">🔍</button>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Enrolled Courses</th>
+              <th>Join Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rahul Sharma</td>
+              <td>rahul.s@example.com</td>
+              <td>2</td>
+              <td>Jan 15, 2025</td>
+              <td><span class="status active">Active</span></td>
+              <td class="actions">
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Priya Patel</td>
+              <td>priya.p@example.com</td>
+              <td>3</td>
+              <td>Feb 02, 2025</td>
+              <td><span class="status active">Active</span></td>
+              <td class="actions">
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Amit Kumar</td>
+              <td>amit.k@example.com</td>
+              <td>1</td>
+              <td>Mar 10, 2025</td>
+              <td><span class="status inactive">Inactive</span></td>
+              <td class="actions">
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-content" id="instructors">
+        <h2>Manage Instructors</h2>
+        <div class="action-bar">
+          <button id="add-instructor-btn" class="btn">Add New Instructor</button>
+          <div class="search-bar">
+            <input type="text" placeholder="Search instructors..." />
+            <button class="search-btn">🔍</button>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Expertise</th>
+              <th>Courses</th>
+              <th>Students</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shraddha Khapra</td>
+              <td>Web Development</td>
+              <td>2</td>
+              <td>456</td>
+              <td><span class="status active">Active</span></td>
+              <td class="actions">
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Rahul Mishra</td>
+              <td>Data Science</td>
+              <td>3</td>
+              <td>389</td>
+              <td><span class="status active">Active</span></td>
+              <td class="actions">
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Priya Desai</td>
+              <td>UI/UX Design</td>
+              <td>1</td>
+              <td>124</td>
+              <td><span class="status active">Active</span></td>
+              <td class="actions">
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-content" id="settings">
+        <h2>Admin Settings</h2>
+        <div class="settings-container">
+          <div class="settings-section">
+            <h3>Personal Information</h3>
+            <form id="personal-info-form">
+              <div class="form-group">
+                <label for="admin-name">Name</label>
+                <input type="text" id="admin-name" value="Admin User" />
+              </div>
+              <div class="form-group">
+                <label for="admin-email">Email</label>
+                <input type="email" id="admin-email" value="admin@learnverse.com" />
+              </div>
+              <div class="form-group">
+                <label for="admin-phone">Phone</label>
+                <input type="tel" id="admin-phone" value="+91 98765 43210" />
+              </div>
+              <button type="submit" class="btn save-btn">Save Changes</button>
+            </form>
+          </div>
+
+          
+         
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wave"></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>LearnTech Academy provides world-class education to help you advance your career in technology.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">t</a>
+            <a href="#" class="social-icon">in</a>
+            <a href="#" class="social-icon">yt</a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#">Popular Courses</a></li>
+            <li><a href="#">Career Paths</a></li>
+            <li><a href="#">Free Tutorials</a></li>
+            <li><a href="#">Student Success Stories</a></li>
+            <li><a href="#">Learning Resources</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Help & Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Technical Support</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Career Services</a></li>
+          </ul>
+          <div class="certificate-badge">
+            <p>Accredited Learning Provider</p>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to get notifications about new courses and special offers.</p>
+          
+          <p style="margin-top:15px; font-size:13px;">Join 50,000+ students already learning with us!</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 LearnTech Academy. All rights reserved.</p>
+        <p>
+          <a href="#" style="color:#fff; margin:0 10px; font-size:13px;">Privacy Policy</a>
+          <a href="#" style="color:#fff; margin:0 10px; font-size:13px;">Terms of Service</a>
+          <a href="#" style="color:#fff; margin:0 10px; font-size:13px;">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="admin.js"></script>
+</body>
+</html>

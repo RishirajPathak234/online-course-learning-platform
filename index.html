@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Verse - Key Source Learning Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </head>
+  <body>
+    <canvas id="confetti-canvas"></canvas>
+    <nav>
+      <div class="container nav-content">
+        <div class="logo">Learn Verse</div>
+        <div class="nav-links">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="course.html" class="nav-link" target="_blank">Courses</a>
+          <a href="learning.html" class="nav-link" target="_blank">Learning & Instructor</a>
+   
+          <a href="admin.html" class="nav-link" target="_blank">Admin Panel</a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle">🌙</button>
+      </div>
+    </nav>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>
+            Welcome to the
+            <span
+              style="
+                background: var(--gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+              >Course Learning Platform</span
+            >
+          </h1>
+          <p>
+            Welcome to the Course Learning Platform, where education meets
+            innovation. Dive into an engaging and interactive learning
+            experience designed to make acquiring knowledge both enjoyable and
+            effective. Our platform features immersive 3D visuals, dynamic
+            cursor effects, and a seamless user interface that enhances your
+            journey. With AI-powered assistance, you can get instant support and
+            guidance, ensuring a smooth and efficient learning process. Explore
+            a vast library of courses tailored to your interests, work on
+            hands-on projects, and unlock your full potential. Enjoy a
+            beautifully crafted aesthetic that blends technology and creativity,
+            making learning not just productive but also visually captivating.
+          </p>
+          <a href="course.html" target="_blank " class="cta-button">Explore More</a>
+        </div>
+        <div id="model-container"></div>
+      </div>
+
+
+ 
+    
+    <div class="chat-box" id="chat-box">
+      <div class="chat-header" id="chat-header">
+        <span>Chat with AI Assistant</span>
+        <span class="toggle-chat">▲</span>
+      </div>
+      <div class="chat-body" id="chat-body">
+        <div class="message bot-message">
+          Hey there! How can I help you today?
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input
+          type="text"
+          class="chat-input"
+          id="chat-input"
+          placeholder="Type a message..."
+        />
+        <button class="voice-btn" id="voice-btn">🎤</button>
+        <button class="send-btn" id="send-btn">➤</button>
+      </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>

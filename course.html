@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Online Course Platform</title>
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Learn Verse</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    
+                    <li><a href="learning.html" target="_blank">Learning & Instructor</a></li>
+                    <li><a href="admin.html">Admin Panel</a></li>
+                </ul>
+            </nav>
+          
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Expand Your Skills with Our Online Courses</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for courses...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="filters container">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="all">All Levels</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Price:</label>
+                <select id="price">
+                    <option value="all">All Prices</option>
+                    <option value="free">Free</option>
+                    <option value="paid">Paid</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="duration">Duration:</label>
+                <select id="duration">
+                    <option value="all">Any Duration</option>
+                    <option value="short">Short (<3 hours)</option>
+                    <option value="medium">Medium (3-10 hours)</option>
+                    <option value="long">Long (>10 hours)</option>
+                </select>
+            </div>
+            <button id="filter-btn">Apply Filters</button>
+        </div>
+    </section>
+
+    <section class="popular-courses container">
+        <h2>Popular Courses</h2>
+        <div id="popular-courses-container" class="courses-grid"></div>
+    </section>
+
+    <section class="recommendations container">
+        <h2>Recommended For You</h2>
+        <div id="recommendations-container" class="courses-grid"></div>
+    </section>
+
+    <footer>
+        <div class="wave"></div>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>About Us</h3>
+              <p>LearnTech Academy provides world-class education to help you advance your career in technology.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon">f</a>
+                <a href="#" class="social-icon">t</a>
+                <a href="#" class="social-icon">in</a>
+                <a href="#" class="social-icon">yt</a>
+              </div>
+            </div>
+            
+            <div class="footer-section">
+              <h3>Explore</h3>
+              <ul class="footer-links">
+                <li><a href="#">Popular Courses</a></li>
+                <li><a href="#">Career Paths</a></li>
+                <li><a href="#">Free Tutorials</a></li>
+                <li><a href="#">Student Success Stories</a></li>
+                <li><a href="#">Learning Resources</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <h3>Help & Support</h3>
+              <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Technical Support</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Career Services</a></li>
+              </ul>
+              <div class="certificate-badge">
+                <p>Accredited Learning Provider</p>
+              </div>
+            </div>
+            
+            <div class="footer-section">
+              <h3>Stay Updated</h3>
+              <p>Subscribe to get notifications about new courses and special offers.</p>
+              
+              <p style="margin-top:15px; font-size:13px;">Join 50,000+ students already learning with us!</p>
+            </div>
+          </div>
+          
+          <div class="footer-bottom">
+            <p>&copy; 2025 LearnTech Academy. All rights reserved.</p>
+            <p>
+              <a href="#" style="color:#fff; margin:0 10px; font-size:13px;">Privacy Policy</a>
+              <a href="#" style="color:#fff; margin:0 10px; font-size:13px;">Terms of Service</a>
+              <a href="#" style="color:#fff; margin:0 10px; font-size:13px;">Cookie Policy</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+  
+
+    <script src="course.js"></script>
+</body>
+</html>
